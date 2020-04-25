@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Fav;
 use App\Haiku;
+use App\Http\Requests\FavDestroyRequest;
 use App\Http\Services\HaikuGenerator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HaikuController extends Controller
 {
@@ -47,8 +49,13 @@ class HaikuController extends Controller
             Auth::user()->favs()->save($fav);
         }
         if($request->input('type') === "defav") {
-
+            //  ¯\_(ツ)_/¯
         }
+        return redirect()->back();
+    }
+
+    public function destroyFav(FavDestroyRequest $request) {
+        DB::table('favs')->where('id', $request->input('id'))->delete();
         return redirect()->back();
     }
 
