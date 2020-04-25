@@ -67,6 +67,11 @@ class HaikuController extends Controller
         return redirect()->back();
     }
 
+    public function  destroyDefav(Request $request) {
+        DB::table('defavs')->where('id', $request->input('id'))->delete();
+        return redirect()->back();
+    }
+
 
     /**
      * @return array
