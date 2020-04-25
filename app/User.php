@@ -44,4 +44,8 @@ class User extends Authenticatable
     public function favs() {
         return $this->hasMany(Fav::class);
     }
+
+    public function defavs() {
+        return $this->hasMany(Defav::class);
+    }
 }

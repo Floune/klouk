@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Defav;
 use App\Fav;
 use App\Haiku;
 use App\Http\Requests\FavDestroyRequest;
+use App\Http\Requests\FavStoreRequest;
 use App\Http\Services\HaikuGenerator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,13 +45,19 @@ class HaikuController extends Controller
         return redirect()->back();
     }
 
-    public function fav(Request $request) {
+    public function fav(FavStoreRequest $request) {
         if($request->input('type') === "fav") {
-            $fav = Fav::make(["text" => $request->input('va')]);
+            $fav = Fav::make([
+                "text" => $request->input('va')
+            ]);
             Auth::user()->favs()->save($fav);
         }
         if($request->input('type') === "defav") {
-            //  ¯\_(ツ)_/¯
+            $defav = Defav::make([
+                "text" => $request->input('va-txt'),
+                "key" => $request->input('va'),
+            ]);
+            Auth::user()->defavs()->save($defav);
         }
         return redirect()->back();
     }
