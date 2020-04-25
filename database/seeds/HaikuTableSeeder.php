@@ -49,12 +49,27 @@ class HaikuTableSeeder extends Seeder
                 "user_id" => 1
             ],
             [
-                "text" => "il Déambule",
+                "text" => "il fourre",
                 "part" => 2,
                 "user_id" => 1
             ],
             [
                 "text" => "Avec moiteur",
+                "part" => 3,
+                "user_id" => 1
+            ],
+            [
+                "text" => "Si demain",
+                "part" => 1,
+                "user_id" => 1
+            ],
+            [
+                "text" => "Il fait trop chaud",
+                "part" => 2,
+                "user_id" => 1
+            ],
+            [
+                "text" => "Je démissionne",
                 "part" => 3,
                 "user_id" => 1
             ],
