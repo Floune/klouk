@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Defav;
-use App\Fav;
 use App\Haiku;
 use App\Http\Requests\FavDestroyRequest;
 use App\Http\Requests\FavStoreRequest;
 use App\Http\Services\HaikuGenerator;
+use App\Score;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -25,52 +24,43 @@ class HaikuController extends Controller
             $debut = new Haiku();
             $debut->text = $request->input('debut');
             $debut->part = 1;
-            Auth::user()->haikus()->save($debut);
+            $debut->save();
         }
 
         if (!is_null($request->input('milieu'))) {
             $milieu = new Haiku();
             $milieu->part = 2;
             $milieu->text = $request->input('milieu');
-            Auth::user()->haikus()->save($milieu);
+            $milieu->save();
         }
 
         if (!is_null($request->input('fin'))) {
             $fin = new Haiku();
             $fin->part = 3;
             $fin->text = $request->input('fin');
-            Auth::user()->haikus()->save($fin);
+            $fin->save();
         }
 
         return redirect()->back();
     }
 
     public function fav(FavStoreRequest $request) {
+        $key = join('_', explode(', ', $request->input('va')));
         if($request->input('type') === "fav") {
-            $fav = Fav::make([
-                "text" => $request->input('va')
-            ]);
-            Auth::user()->favs()->save($fav);
+            $score = Score::firstOrNew(['key' => $key]);
+            $score->key = $key;
+            $score->score += 1;
+            $score->save();
         }
         if($request->input('type') === "defav") {
-            $defav = Defav::make([
-                "text" => $request->input('va-txt'),
-                "key" => $request->input('va'),
-            ]);
-            Auth::user()->defavs()->save($defav);
+            $score = Score::firstOrNew(['key' => $key]);
+            $score->key = $key;
+            $score->score -= 1;
+            $score->save();
         }
         return redirect()->back();
     }
 
-    public function destroyFav(FavDestroyRequest $request) {
-        DB::table('favs')->where('id', $request->input('id'))->delete();
-        return redirect()->back();
-    }
-
-    public function  destroyDefav(Request $request) {
-        DB::table('defavs')->where('id', $request->input('id'))->delete();
-        return redirect()->back();
-    }
 
 
     /**
@@ -78,7 +68,6 @@ class HaikuController extends Controller
      */
     public function show()
     {
-
         return (new HaikuGenerator())->get();
     }
 

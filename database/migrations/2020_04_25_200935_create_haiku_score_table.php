@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFavsTable extends Migration
+class CreateHaikuScoreTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateFavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('favs', function (Blueprint $table) {
+        Schema::create('haiku_score', function (Blueprint $table) {
             $table->id();
-            $table->string('text');
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignId('haiku_id')->references('id')->on('haikus');
+            $table->foreignId('score_id')->references('id')->on('scores');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateFavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favs');
+        Schema::dropIfExists('haiku_score');
     }
 }

@@ -11,4 +11,8 @@ class Haiku extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+    public function scores() {
+        return $this->belongsToMany(Score::class);
+    }
 }

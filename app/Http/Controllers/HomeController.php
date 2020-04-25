@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Defav;
 use App\Fav;
+use App\Score;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')->with(['favs' => Fav::all(), 'defavs' => Defav::all()]);
+        $fame = Score::where('score', '>', 4)->get();
+        $shame = Score::where('score', '<', -4)->get();
+        return view('home')->with(['fame' => $fame, 'shame' => $shame]);
     }
 }

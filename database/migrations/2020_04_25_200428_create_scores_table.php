@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDefavsTable extends Migration
+class CreateScoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateDefavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('defavs', function (Blueprint $table) {
+        Schema::create('scores', function (Blueprint $table) {
             $table->id();
             $table->string('key');
-            $table->string('text');
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->integer('score')->default(0);
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateDefavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('defavs');
+        Schema::dropIfExists('scores');
     }
 }

@@ -17,7 +17,6 @@ class CreateHaikusTable extends Migration
             $table->id();
             $table->string('text');
             $table->integer('part');
-            $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

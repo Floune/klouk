@@ -23,5 +23,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/haiku', 'HaikuController@show')->name('haiku')->middleware('auth');
 Route::post('/haiku', 'HaikuController@store')->name('haiku.post')->middleware('auth');
 Route::post('/fav', 'HaikuController@fav')->name('fav')->middleware('auth');
-Route::post('/fav-destroy-lol-amine', 'HaikuController@destroyFav')->name('fav.destroy')->middleware('auth');
-Route::post('/defav', 'HaikuController@destroyDefav')->name('defav.destroy')->middleware('auth');
