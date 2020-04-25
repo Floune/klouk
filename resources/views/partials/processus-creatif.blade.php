@@ -1,3 +1,4 @@
+{{--TODO rendre inutilisable grace à une ui du futur--}}
 <div class="processus-creatif">
     <form action="{{route('haiku.post')}}" method="post">
         @csrf

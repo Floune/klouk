@@ -34,12 +34,27 @@ class HaikuTableSeeder extends Seeder
                 "user_id" => 1
             ],
             [
-                "text" => "les chiens s'enculent",
+                "text" => "Les chiens s'enculent",
                 "part" => 2,
                 "user_id" => 1
             ],
             [
                 "text" => "Joie !",
+                "part" => 3,
+                "user_id" => 1
+            ],
+            [
+                "text" => "Parmis les putes",
+                "part" => 1,
+                "user_id" => 1
+            ],
+            [
+                "text" => "il Déambule",
+                "part" => 2,
+                "user_id" => 1
+            ],
+            [
+                "text" => "Avec moiteur",
                 "part" => 3,
                 "user_id" => 1
             ],

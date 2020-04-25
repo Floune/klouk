@@ -11,10 +11,4 @@ $(document).ready(function() {
        });
     });
 
-    $('.hof').on("click", function() {
-        $.get('fav', function(response) {
-            console.log(response);
-        });
-    });
-
 });
