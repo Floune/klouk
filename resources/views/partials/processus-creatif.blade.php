@@ -1,6 +1,16 @@
 {{--TODO rendre inutilisable grace à une ui du futur--}}
-<div class="processus-creatif">
-    <h1>Création de haiku pur</h1>
+<div class="window processus-creatif">
+    <div class="title-bar">
+        <div class="title-bar-text">
+            Création de haiku pur
+        </div>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    <div class="window-body">
     <form action="{{route('haiku.post')}}" method="post">
         @csrf
         <div class="un">
@@ -19,4 +29,5 @@
             <input type="submit" value="Envoyer">
         </div>
     </form>
+    </div>
 </div>

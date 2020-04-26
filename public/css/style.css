@@ -1,0 +1,41 @@
+body {
+    background: url("/win.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.haiku2000 {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    max-width: 400px;
+}
+
+.boutons {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hof {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    max-width: 400px;
+}
+
+.hos {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    max-width: 400px;
+}
+
+.processus-creatif {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    max-width: 200px;
+}
+

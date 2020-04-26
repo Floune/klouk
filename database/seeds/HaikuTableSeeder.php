@@ -18,12 +18,48 @@ class HaikuTableSeeder extends Seeder
                 "part" => 1,
             ],
             [
-                "text" => "qu'est-ce que tu vas faire ?",
+                "text" => "Tu suces",
+                "part" => 2,
+            ],
+            [
+                "text" => "Pas grave",
                 "part" => 3,
             ],
             [
-                "text" => "En érection",
+                "text" => "Le printemps est là",
+                "part" => 1,
+            ],
+            [
+                "text" => "Deux chiens s'enculent",
                 "part" => 2,
+            ],
+            [
+                "text" => "Joie !",
+                "part" => 3,
+            ],
+            [
+                "text" => "Parmi les fleurs",
+                "part" => 1,
+            ],
+            [
+                "text" => "il fourre",
+                "part" => 2,
+            ],
+            [
+                "text" => "Avec moiteur",
+                "part" => 3,
+            ],
+            [
+                "text" => "Si demain",
+                "part" => 1,
+            ],
+            [
+                "text" => "Il fait trop chaud",
+                "part" => 2,
+            ],
+            [
+                "text" => "Je démissionne",
+                "part" => 3,
             ],
 
         ]);
