@@ -21,7 +21,7 @@
 
     <div id="icon-idea">
         <div class="icon-idea"></div>
-        <p>Générateur de haikus purs</p>
+        <p>Création de haikus purs</p>
     </div>
 
     <div id="icon-fame">
