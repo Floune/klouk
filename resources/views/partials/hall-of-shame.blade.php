@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="window-body">
-        @if(count($fame) === 0)
+        @if(count($shame) === 0)
             <img src="{{asset("empty.gif")}}" alt="">
             <p>Pas encore de haiku au hall of fame</p>
         @endif
