@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function defavs() {
         return $this->hasMany(Defav::class);
     }
+
+    public function scores() {
+        return $this->belongsToMany(Score::class);
+    }
 }

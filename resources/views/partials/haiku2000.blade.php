@@ -14,19 +14,13 @@
         <div class="milieu"></div>
         <div class="fin"></div>
     <div class="boutons">
-        <form action="{{route('fav')}}" method="post">
-            @csrf
-            <input name="va" class="av" type="hidden" >
-            <button name="type"class="defav" type="submit" value="defav">Ce Haiku pue la merde</button>
-        </form>
+        <input name="va" class="av" type="hidden" >
+        <button name="type"class="defav" type="submit" value="defav">Ce Haiku pue la merde</button>
 
         <button class="haiku">Nouveau Haiku</button>
 
-        <form action="{{route('fav')}}" method="post">
-            @csrf
-            <input name="va" class="va" type="hidden" >
-            <button name="type" class="fav" type="submit" value="fav">Fichtre, ce haiku vaut le détour</button>
-        </form>
+        <input name="va" class="va" type="hidden" >
+        <button name="type" class="fav" type="submit" value="fav">Fichtre, ce haiku vaut le détour</button>
     </div>
     </div>
 

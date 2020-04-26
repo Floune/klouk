@@ -46,22 +46,31 @@ class HaikuController extends Controller
 
     public function fav(FavStoreRequest $request) {
         $key = join('_', explode(', ', $request->input('va')));
+        if (!$this->checkCheat($key)) {return redirect()->back();}
         if($request->input('type') === "fav") {
             $score = Score::firstOrNew(['key' => $key]);
             $score->key = $key;
             $score->score += 1;
             $score->save();
+            Auth::user()->scores()->attach($score);
         }
         if($request->input('type') === "defav") {
             $score = Score::firstOrNew(['key' => $key]);
             $score->key = $key;
             $score->score -= 1;
             $score->save();
+            Auth::user()->scores()->attach($score->id);
         }
         return redirect()->back();
     }
 
-
+    public function checkCheat($key) {
+        $previous_votes = Auth::user()->scores->pluck('key');
+        if ($previous_votes->contains($key)) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * @return array

@@ -11,8 +11,6 @@
         </div>
     </div>
     <div class="window-body">
-    <form action="{{route('haiku.post')}}" method="post">
-        @csrf
         <div class="un">
             <label for="debut">Première partie</label>
             <input type="text" name="debut" class="input1">
@@ -26,8 +24,7 @@
             <input type="text" name="fin" class="input3">
         </div>
         <div>
-            <input type="submit" value="Envoyer">
+            <button type="submit" class="sendaiku">Envoyer</button>
         </div>
-    </form>
     </div>
 </div>

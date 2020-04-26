@@ -21,4 +21,8 @@ class Score extends Model
         return join(', ', $parts);
     }
 
+    public function Users() {
+        return $this->belongsToMany(User::class);
+    }
+
 }
