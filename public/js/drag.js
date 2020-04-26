@@ -7,4 +7,5 @@ $(document).ready(function() {
     $("#icon-idea").draggable();
     $("#icon-fame").draggable();
     $("#icon-shame").draggable();
+    $(".popup").draggable();
 })

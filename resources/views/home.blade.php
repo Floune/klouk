@@ -12,8 +12,8 @@
 </head>
 <body>
 
+@include('partials.popup')
 
-<div class="container">
     <div id="icon-haiku">
         <div class="icon-haiku"></div>
         <p>Haiku2000</p>
@@ -42,7 +42,7 @@
 
     @include('partials.hall-of-shame')
 
-</div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/jquery-ui.js')}}"></script>

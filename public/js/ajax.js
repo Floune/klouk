@@ -1,12 +1,15 @@
 $(document).ready(function() {
 
-
     $(".defav").on("click", function() {
         let payload = {
             va: $(".av").val(),
             type: "defav",
         };
         $.post("fav", payload);
+        $(".debut").text('');
+        $(".milieu").text('');
+        $(".fin").text('');
+        $(".popup").show();
     });
 
     $(".fav").on("click", function() {
@@ -15,6 +18,10 @@ $(document).ready(function() {
             type: "fav",
         };
         $.post("fav", payload);
+        $(".debut").text('');
+        $(".milieu").text('');
+        $(".fin").text('');
+        $(".popup").show();
     });
 
     $(".sendaiku").on("click", function() {
@@ -23,7 +30,11 @@ $(document).ready(function() {
             milieu: $(".input2").val(),
             fin: $(".input3").val(),
         };
-        $.post("haiku", payload)
+        $.post("haiku", payload);
+        $(".input1").val('');
+        $(".input2").val('');
+        $(".input3").val('');
+        $(".popup").show();
     })
 
 });

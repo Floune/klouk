@@ -3,7 +3,7 @@ $(document).ready(function() {
     $(".processus-creatif").hide();
     $(".hof").hide();
     $(".hos").hide();
-
+    $(".popup").hide();
 
     $("#icon-haiku").dblclick(function() {
         $(".haiku2000").show();
@@ -33,5 +33,7 @@ $(document).ready(function() {
         $(".hos").hide();
     });
 
-
+    $(".close-popup").on("click", function() {
+        $(".popup").hide();
+    });
 });
