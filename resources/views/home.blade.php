@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/hof.css')}}">
     <link rel="stylesheet" href="{{asset('css/hos.css')}}">
     <link rel="stylesheet" href="{{asset('css/icons.css')}}">
+    <link rel="stylesheet" href="{{asset('css/paint.css')}}">
     <title>PageProut</title>
 </head>
 <body>
