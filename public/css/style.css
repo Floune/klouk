@@ -114,3 +114,13 @@ body {
 #paint {
     border: 1px solid black;
 }
+
+.paint-container {
+    display: flex;
+}
+
+.paint-commands {
+    display: flex;
+    flex-direction: column;
+}
+

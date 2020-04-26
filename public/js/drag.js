@@ -1,12 +1,8 @@
 $(document).ready(function() {
-    $(".haiku2000").draggable();
-    $(".hos").draggable();
-    $(".hof").draggable();
-    $(".processus-creatif").draggable();
+    $(".window").draggable({handle: ".title-bar"});
     $("#icon-haiku").draggable();
     $("#icon-idea").draggable();
     $("#icon-fame").draggable();
     $("#icon-shame").draggable();
     $("#icon-paint").draggable();
-    $(".popup").draggable();
 })

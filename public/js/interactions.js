@@ -8,6 +8,7 @@ $(document).ready(function() {
 
     $("#icon-haiku").dblclick(function() {
         $(".haiku2000").show();
+        $(".haiku2000").show();
     });
     $(".close-haiku").on("click", function() {
         $(".haiku2000").hide();

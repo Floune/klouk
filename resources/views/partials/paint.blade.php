@@ -13,6 +13,15 @@
         <div class="paint-container">
             <canvas id="paint" width="300" height="300">
             </canvas>
+            <div class="paint-commands">
+                <button class="couleur red">ROUGE</button>
+                <button class="couleur blue">BLEU</button>
+                <button class="couleur green">VERT</button>
+                <button class="couleur yellow">JAUNE</button>
+                <button class="couleur random">RANDOM</button>
+                <hr>
+                <button class="erase">EFFACER</button>
+            </div>
         </div>
     </div>
 

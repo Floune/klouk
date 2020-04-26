@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "98.css": "^0.1.7",
         "jquery-ui-dist": "^1.12.1"
     }
 }
