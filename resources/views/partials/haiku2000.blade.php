@@ -9,7 +9,7 @@
             <button class="close-haiku" aria-label="Close"></button>
         </div>
     </div>
-    <div class="window-body">
+    <div class="window-body haik">
         <div class="debut"></div>
         <div class="milieu"></div>
         <div class="fin"></div>

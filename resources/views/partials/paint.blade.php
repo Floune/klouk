@@ -21,6 +21,10 @@
                 <button class="couleur random">RANDOM</button>
                 <hr>
                 <button class="erase">EFFACER</button>
+                <hr>
+                <label for="grosseur">GROSSEUR</label>
+                <input type="range" id="grosseur" name="grosseur"
+                       min="1" max="18" step="1">
             </div>
         </div>
     </div>

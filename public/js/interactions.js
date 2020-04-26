@@ -32,6 +32,7 @@ $(document).ready(function() {
 
     $("#icon-shame").dblclick(function() {
         $(".hos").show();
+        $(".hos").center();
     });
     $(".close-hos").on("click", function() {
         $(".hos").hide();

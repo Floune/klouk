@@ -6,7 +6,6 @@ $(document).ready(function() {
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     let color = "black";
-    let linewidth = 4;
     let mouseClicked = false;
     let mouseReleased = true;
 
@@ -17,10 +16,10 @@ $(document).ready(function() {
     $("#paint").on("mousemove", function(e) {
         if (mouseClicked) {
             ctx.beginPath();
-            let x = e.pageX - $('.paint').offset().left - 10;
-            let y = e.pageY - $('.paint').offset().top - 30;
+            let x = e.pageX - $('.paint').offset().left;
+            let y = e.pageY - $('.paint').offset().top;
             ctx.arc(x, y, 7.5, 0, Math.PI * 2, false);
-            ctx.lineWidth = linewidth;
+            ctx.lineWidth = $("#grosseur").val();
             if (color === "random"){
                 ctx.strokeStyle = megaColor();
             } else {

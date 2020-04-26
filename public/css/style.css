@@ -39,6 +39,14 @@ body {
     min-height: 100px;
     max-width: 200px;
 }
+
+.haik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #icon-haiku {
     width: 50px;
     height: 80px;
@@ -123,4 +131,3 @@ body {
     display: flex;
     flex-direction: column;
 }
-
