@@ -22,6 +22,7 @@ $(document).ready(function() {
         $(".milieu").text('');
         $(".fin").text('');
         $(".popup").show();
+        $(".popup").center();
     });
 
     $(".sendaiku").on("click", function() {
@@ -35,6 +36,7 @@ $(document).ready(function() {
         $(".input2").val('');
         $(".input3").val('');
         $(".popup").show();
+        $(".popup").center();
     })
 
 });

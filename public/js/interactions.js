@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     $("#icon-haiku").dblclick(function() {
         $(".haiku2000").show();
-        $(".haiku2000").show();
+        $(".haiku2000").center();
     });
     $(".close-haiku").on("click", function() {
         $(".haiku2000").hide();
@@ -16,6 +16,7 @@ $(document).ready(function() {
 
     $("#icon-idea").dblclick(function() {
         $(".processus-creatif").show();
+        $(".processus-creatif").center();
     });
     $(".close-processus").on("click", function() {
         $(".processus-creatif").hide();
@@ -23,6 +24,7 @@ $(document).ready(function() {
 
     $("#icon-fame").dblclick(function() {
         $(".hof").show();
+        $(".hof").center();
     });
     $(".close-hof").on("click", function() {
         $(".hof").hide();
