@@ -10,8 +10,10 @@
         </div>
     </div>
     <div class="window-body">
-        <canvas id="paint" width="300" height="300">
-        </canvas>
+        <div class="paint-container">
+            <canvas id="paint" width="300" height="300">
+            </canvas>
+        </div>
     </div>
 
 </div>

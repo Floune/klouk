@@ -21,8 +21,18 @@ $(document).ready(function() {
             let y = e.pageY - $('.paint').offset().top - 30;
             ctx.arc(x, y, 7.5, 0, Math.PI * 2, false);
             ctx.lineWidth = 5;
-            ctx.strokeStyle = "blue";
+            ctx.strokeStyle = megaColor();
             ctx.stroke()
         }
     }
+
+    function megaColor() {
+        let chars = "0123456789ABCDEF";
+        let cbow = '#';
+        for (let i = 0; i < 6; i++){
+            cbow += chars[Math.floor(Math.random() * 16)]
+        }
+        return cbow;
+    }
+
 });
