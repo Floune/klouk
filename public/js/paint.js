@@ -16,8 +16,8 @@ $(document).ready(function() {
     $("#paint").on("mousemove", function(e) {
         if (mouseClicked) {
             ctx.beginPath();
-            let x = e.pageX - $('.paint').offset().left;
-            let y = e.pageY - $('.paint').offset().top;
+            let x = e.pageX - $('.paint').offset().left - 15;
+            let y = e.pageY - $('.paint').offset().top - 30;
             ctx.arc(x, y, 7.5, 0, Math.PI * 2, false);
             ctx.lineWidth = $("#grosseur").val();
             if (color === "random"){
@@ -69,6 +69,10 @@ $(document).ready(function() {
         clearButtons()
         $(".random").css("background-color", megaColor());
     });
+
+    $("#grosseur").on('input', function() {
+        $(".linewidth").text($("#grosseur").val());
+    })
 
     function clearButtons() {
         $(".couleur").css("background-color", "#C0C0C0");

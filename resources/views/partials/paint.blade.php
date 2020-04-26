@@ -22,7 +22,7 @@
                 <hr>
                 <button class="erase">EFFACER</button>
                 <hr>
-                <label for="grosseur">GROSSEUR</label>
+                <label for="grosseur">GROSSEUR: <span class="linewidth"></span></label>
                 <input type="range" id="grosseur" name="grosseur"
                        min="1" max="18" step="1">
             </div>
