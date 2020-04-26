@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(".hof").hide();
     $(".hos").hide();
     $(".popup").hide();
+    $(".paint").hide();
 
     $("#icon-haiku").dblclick(function() {
         $(".haiku2000").show();
@@ -31,6 +32,15 @@ $(document).ready(function() {
     });
     $(".close-hos").on("click", function() {
         $(".hos").hide();
+    });
+
+    $("#icon-paint").dblclick(function() {
+        $('.paint').css({top:'50%',left:'50%',margin:'-'+($('#myDiv').height() / 2)+'px 0 0 -'+($('#myDiv').width() / 2)+'px'});
+        $(".paint").show();
+
+    });
+    $(".close-paint").on("click", function() {
+        $(".paint").hide();
     });
 
     $(".close-popup").on("click", function() {

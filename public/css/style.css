@@ -88,8 +88,29 @@ body {
     background-size: cover;
 }
 
+#icon-paint {
+    width: 75px;
+    height: 80px;
+}
+
+.icon-paint {
+    background: url('/paint.png');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .popup {
     width: 150px;
     height:90px;
 }
 
+.paint {
+    width: 400px;
+    height: 350px;
+}
+
+#paint {
+    border: 1px solid black;
+}

@@ -34,6 +34,11 @@
         <p>Hall of shame</p>
     </div>
 
+<div id="icon-paint">
+    <div class="icon-paint"></div>
+    <p>Paint</p>
+</div>
+
     @include('partials.haiku2000')
 
     @include('partials.processus-creatif')
@@ -42,7 +47,7 @@
 
     @include('partials.hall-of-shame')
 
-
+    @include('partials.paint')
 
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/jquery-ui.js')}}"></script>
@@ -57,5 +62,6 @@
 <script src="{{ asset('js/drag.js')}}"></script>
 <script src="{{ asset('js/ajax.js')}}"></script>
 <script src="{{ asset('js/interactions.js')}}"></script>
+<script src="{{ asset('js/paint.js')}}"></script>
 </body>
 </html>
