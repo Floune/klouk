@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Defav;
 use App\Fav;
+use App\Message;
 use App\Score;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class HomeController extends Controller
     {
         $fame = Score::where('score', '>', 4)->get();
         $shame = Score::where('score', '<', -4)->get();
-        return view('home')->with(['fame' => $fame, 'shame' => $shame]);
+        $messages = Message::all();
+        return view('home')->with(['fame' => $fame, 'shame' => $shame, "messages" => $messages]);
     }
 }

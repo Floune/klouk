@@ -5,4 +5,5 @@ $(document).ready(function() {
     $("#icon-fame").draggable();
     $("#icon-shame").draggable();
     $("#icon-paint").draggable();
+    $("#icon-chat").draggable();
 })

@@ -5,6 +5,15 @@ $(document).ready(function() {
     $(".hos").hide();
     $(".popup").hide();
     $(".paint").hide();
+    $(".chat").hide();
+
+    $("#icon-chat").dblclick(function() {
+        $(".chat").show();
+        $(".chat").center();
+    });
+    $(".close-chat").on("click", function() {
+        $(".chat").hide();
+    });
 
     $("#icon-haiku").dblclick(function() {
         $(".haiku2000").show();

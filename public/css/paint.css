@@ -1,0 +1,17 @@
+.paint {
+    width: 455px;
+    height: 340px;
+}
+
+#paint {
+    border: 1px solid black;
+}
+
+.paint-container {
+    display: flex;
+}
+
+.paint-commands {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,10 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chat {
+    min-height: 400px;
+    min-width: 500px;
+}

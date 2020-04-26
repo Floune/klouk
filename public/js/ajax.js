@@ -22,7 +22,6 @@ $(document).ready(function() {
         $(".milieu").text('');
         $(".fin").text('');
         $(".popup").show();
-        $(".popup").center();
     });
 
     $(".sendaiku").on("click", function() {
@@ -36,7 +35,25 @@ $(document).ready(function() {
         $(".input2").val('');
         $(".input3").val('');
         $(".popup").show();
-        $(".popup").center();
     })
+
+    $(".send-chat").on("click", function() {
+        let payload = {
+          text: $(".text").val(),
+        };
+        $.post("message", payload).done(function(data) {
+            updateUI(data);
+        });
+        $(".text").val('');
+
+    });
+
+    function updateUI(data) {
+        let html;
+        $.each(data, function(d, cle) {
+            html += "<p>"+cle.text+"</p>"
+        });
+        $(".msg").html(html);
+    }
 
 });

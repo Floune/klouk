@@ -8,36 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/98.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/chat.css')}}">
+    <link rel="stylesheet" href="{{asset('css/create.css')}}">
+    <link rel="stylesheet" href="{{asset('css/haiku2000.css')}}">
+    <link rel="stylesheet" href="{{asset('css/hof.css')}}">
+    <link rel="stylesheet" href="{{asset('css/hos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/icons.css')}}">
     <title>PageProut</title>
 </head>
 <body>
 
-@include('partials.popup')
+    @include('partials.popup')
 
-    <div id="icon-haiku">
-        <div class="icon-haiku"></div>
-        <p>Haiku2000</p>
-    </div>
-
-    <div id="icon-idea">
-        <div class="icon-idea"></div>
-        <p>Création de haikus purs</p>
-    </div>
-
-    <div id="icon-fame">
-        <div class="icon-fame"></div>
-        <p>Hall of fame</p>
-    </div>
-
-    <div id="icon-shame">
-        <div class="icon-shame"></div>
-        <p>Hall of shame</p>
-    </div>
-
-<div id="icon-paint">
-    <div class="icon-paint"></div>
-    <p>Paint</p>
-</div>
+    @include('partials.icons')
 
     @include('partials.haiku2000')
 
@@ -48,6 +31,8 @@
     @include('partials.hall-of-shame')
 
     @include('partials.paint')
+
+    @include('partials.chat')
 
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/jquery-ui.js')}}"></script>

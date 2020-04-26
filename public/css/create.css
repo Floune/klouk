@@ -1,0 +1,6 @@
+.processus-creatif {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    max-width: 200px;
+}
