@@ -14,23 +14,34 @@
 
 
 <div class="container">
+    <div id="icon-haiku">
+        <div class="icon-haiku"></div>
+        <p>Haiku2000</p>
+    </div>
+
+    <div id="icon-idea">
+        <div class="icon-idea"></div>
+        <p>Générateur de haikus purs</p>
+    </div>
+
+    <div id="icon-fame">
+        <div class="icon-fame"></div>
+        <p>Hall of fame</p>
+    </div>
+
+    <div id="icon-shame">
+        <div class="icon-shame"></div>
+        <p>Hall of shame</p>
+    </div>
 
     @include('partials.haiku2000')
-   <div>
-        <marquee>fesse</marquee>
-    </div>
+
     @include('partials.processus-creatif')
-    <div>
-        <marquee>fesse</marquee>
-    </div>
+
     @include('partials.hall-of-fame')
-    <div>
-        <marquee>fesse</marquee>
-    </div>
+
     @include('partials.hall-of-shame')
-    <div>
-        <marquee>fesse</marquee>
-    </div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
@@ -45,5 +56,6 @@
 <script src="{{ asset('js/haiku.js')}}"></script>
 <script src="{{ asset('js/drag.js')}}"></script>
 <script src="{{ asset('js/ajax.js')}}"></script>
+<script src="{{ asset('js/interactions.js')}}"></script>
 </body>
 </html>

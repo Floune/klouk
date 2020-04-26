@@ -6,7 +6,7 @@ $(document).ready(function() {
            $(".milieu").text(response[1][0]);
            $(".fin").text(response[2][0]);
 
-           //remplis les valeurs des inputs de favoris au cas où c'est bien ou pas
+           //remplis les valeurs des inputs de votes au cas où c'est bien ou pas
            $(".va").val(response[0][1] + ', ' + response[1][1] + ', ' + response[2][1]);
            $(".av").val(response[0][1] + ', ' + response[1][1] + ', ' + response[2][1]);
        });
