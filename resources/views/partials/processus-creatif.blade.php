@@ -11,18 +11,20 @@
         </div>
     </div>
     <div class="window-body">
-        <div class="un">
+
+        <div class="un field-row-stacked">
             <label for="debut">Première partie</label>
             <input type="text" name="debut" class="input1">
         </div>
-        <div class="deux">
+        <div class="deux field-row-stacked">
             <label for="milieu">Deuxième partie</label>
             <input type="text" name="milieu" class="input2">
         </div>
-        <div class="trois">
+        <div class="trois field-row-stacked">
             <label for="fin">Première partie</label>
             <input type="text" name="fin" class="input3">
         </div>
+
         <div>
             <button type="submit" class="sendaiku">Envoyer</button>
         </div>
