@@ -6,4 +6,5 @@ $(document).ready(function() {
     $("#icon-shame").draggable();
     $("#icon-paint").draggable();
     $("#icon-chat").draggable();
+    $("#icon-minecraft").draggable();
 })

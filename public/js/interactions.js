@@ -6,6 +6,7 @@ $(document).ready(function() {
     $(".popup").hide();
     $(".paint").hide();
     $(".chat").hide();
+    $(".minecraft").hide();
 
     $("#icon-chat").dblclick(function() {
         $(".chat").show();
@@ -56,10 +57,23 @@ $(document).ready(function() {
         $(".paint").hide();
     });
 
+    $("#icon-minecraft").dblclick(function() {
+        $(".minecraft").show();
+        $(".minecraft").center();
+    });
+    $(".close-minecraft").on("click", function() {
+        $(".minecraft").hide();
+    });
+
+    $(".close-hos").on("click", function() {
+        $(".hos").hide();
+    });
+
     $(".close-popup").on("click", function() {
         $(".popup").hide();
     });
 });
+
 jQuery.fn.center = function () {
     this.css("position","absolute");
     this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) +

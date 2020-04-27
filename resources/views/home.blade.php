@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{asset('css/hos.css')}}">
     <link rel="stylesheet" href="{{asset('css/icons.css')}}">
     <link rel="stylesheet" href="{{asset('css/paint.css')}}">
+    <link rel="stylesheet" href="{{asset('css/minecraft.css')}}">
     <title>PageProut</title>
 </head>
 <body>
@@ -32,6 +33,8 @@
     @include('partials.hall-of-shame')
 
     @include('partials.paint')
+
+    @include('partials.minecraft')
 
     @include('partials.chat')
 

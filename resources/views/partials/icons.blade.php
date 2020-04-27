@@ -27,3 +27,8 @@
     <div class="icon-chat"></div>
     <p>Chat</p>
 </div>
+
+<div id="icon-minecraft">
+    <div class="icon-minecraft"></div>
+    <p>Minecraft</p>
+</div>
