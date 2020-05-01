@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     $(".defav").on("click", function() {
         let payload = {
             va: $(".av").val(),
@@ -41,11 +47,8 @@ $(document).ready(function() {
         let payload = {
           text: $(".text").val(),
         };
-        $.post("message", payload).done(function(data) {
-            updateUI(data);
-        });
-        $(".text").val('');
 
+        console.log("envoyer ", payload)
     });
 
     function updateUI(data) {
